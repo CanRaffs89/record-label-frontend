@@ -1,0 +1,61 @@
+@use '_navbar';
+@use '_hero';
+@use '_artists';
+
+// Core Styles
+:root {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    --dark-grey: #262626;
+    --mid-grey: #4b4b4b;
+    --light-grey: #6d6d6d;
+    --orange: #e3623c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Helvetica Neue', 'Arial';
+    background-color: var(--dark-grey);
+    color: white;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.container {
+    margin: 0 120px;
+}
+
+.page-container {
+    padding: 100px;
+}
+
+@media (max-width: 810px) {
+    .container {
+        margin: 0 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+}
+
+
+

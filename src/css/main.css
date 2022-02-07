@@ -1,0 +1,144 @@
+.nav-mobile-toggle {
+  border: none;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  height: 50px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+nav .nav-logo {
+  height: 50px;
+  width: 50px;
+}
+nav .nav-logo img {
+  height: 50px;
+  width: 50px;
+}
+nav .nav-links-container {
+  transition: 340ms;
+}
+nav .nav-links-container .nav-link {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  margin-left: 45px;
+}
+
+@media (max-width: 810px) {
+  .nav-mobile-toggle {
+    z-index: 2;
+    display: initial;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .nav-mobile-toggle i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+  .nav-mobile-toggle i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+  .nav-mobile-toggle i:nth-child(3) {
+    margin-top: 4px;
+  }
+
+  nav .nav-logo {
+    z-index: 2;
+  }
+  nav .nav-links-container.active {
+    right: 0;
+  }
+  nav .nav-links-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    min-height: 100vh;
+    width: 50%;
+    display: flex;
+    height: -webkit-fill-available;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: var(--dark-grey);
+  }
+  nav .nav-links-container .nav-link {
+    margin: 20px 30px 20px 45px;
+  }
+}
+#hero-img {
+  width: 100%;
+  height: 660px;
+  padding-top: 100px;
+  background: url("../img/orange-house.png") no-repeat 25% 50%;
+  background-size: cover;
+}
+
+:root {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  --dark-grey: #262626;
+  --mid-grey: #4b4b4b;
+  --light-grey: #6d6d6d;
+  --orange: #e3623c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Helvetica Neue", "Arial";
+  background-color: var(--dark-grey);
+  color: white;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  margin: 0 120px;
+}
+
+.page-container {
+  padding: 100px;
+}
+
+@media (max-width: 810px) {
+  .container {
+    margin: 0 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
