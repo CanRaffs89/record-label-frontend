@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import sanityClient from '../sanity.js';
 
-export const Artists = () => {
+export default function Artists() {
     const [artistData, setArtistData] = useState(null);
-    console.log(artistData)
 
     useEffect(() => {
         sanityClient
             .fetch(`*[_type == 'artist'] | order(name){
                 name,
-                bio,
+                slug,
                 profileImage{
                     asset->{
                         _id,
@@ -22,15 +22,17 @@ export const Artists = () => {
     },[]);
     
     return <div className='page-container'>
-        <h1>Artists</h1>
-        {artistData && artistData.map((artist, index) => {
-            return (
-                <div key={index}>
-                    <h1>{artist.name}</h1>
-                    <p>{artist.bio}</p>
-                    <img src={artist.profileImage.asset.url} alt="" />
-                </div>
-            )
-        })}
+        <div className="artists-grid">
+            {artistData && artistData.map((artist, index) => {
+                return (
+                    <Link className='artist-card' key={artist.slug.current} to={'/artists/' + artist.slug.current}>
+                        <div className="artist-image-wrapper" key={index}>
+                            <img className='artist-image' src={artist.profileImage.asset.url} alt="" />
+                        </div>
+                        <h1 className='artist-name'>{artist.name}</h1>
+                    </Link>
+                )
+            })}
+        </div>
     </div>;
-};
+}

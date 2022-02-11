@@ -40,12 +40,16 @@ p {
 }
 
 .page-container {
-    padding: 100px;
+    padding: 100px 120px;
 }
 
 @media (max-width: 810px) {
     .container {
         margin: 0 30px;
+    }
+
+    .page-container {
+        padding: 90px 30px;
     }
 
     h1 {

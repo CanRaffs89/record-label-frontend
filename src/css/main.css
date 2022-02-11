@@ -87,6 +87,44 @@ nav .nav-links-container .nav-link {
   background-size: cover;
 }
 
+.artists-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.artists-grid .artist-card {
+  width: 25%;
+  padding: 10px 5px;
+}
+.artists-grid .artist-card .artist-name {
+  font-size: 28px;
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+.artists-grid .artist-card .artist-image-wrapper {
+  width: 100%;
+}
+.artists-grid .artist-card .artist-image-wrapper .artist-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .artists-grid .artist-card {
+    width: 33%;
+  }
+}
+@media (max-width: 810px) {
+  .artists-grid .artist-card {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .artists-grid .artist-card {
+    width: 100%;
+  }
+}
 :root {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -124,12 +162,16 @@ p {
 }
 
 .page-container {
-  padding: 100px;
+  padding: 100px 120px;
 }
 
 @media (max-width: 810px) {
   .container {
     margin: 0 30px;
+  }
+
+  .page-container {
+    padding: 90px 30px;
   }
 
   h1 {

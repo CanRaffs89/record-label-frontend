@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from '../img/codesandbox.svg'
 
-export const Navbar = () => {
+export default function Navbar() {
     const [menu, setMenu] = useState(false)
 
     const showMenu = () => setMenu(!menu)
@@ -27,4 +27,4 @@ export const Navbar = () => {
             </nav>
         </>
     )
-};
+}
