@@ -15,6 +15,9 @@ export default function Artists() {
                         _id,
                         url
                     }
+                },
+                albums[]->{
+                    albumTitle
                 }
             }`)
             .then((data) => setArtistData(data))
