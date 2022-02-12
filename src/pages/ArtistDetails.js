@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../sanity.js';
-import imageUrlBuilder from '@sanity/image-url';
 import { Link, useParams } from 'react-router-dom';
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-    return builder.image(source)
-}
 
 export default function ArtistDetails() {
     const [artistDetails, setArtistDetails] = useState(null);
@@ -27,7 +21,13 @@ export default function ArtistDetails() {
             albums[]->{
                 albumTitle,
                 releaseDate,
-                slug
+                slug,
+                albumImage{
+                    asset->{
+                        _id,
+                        url
+                    }
+                }
             }
         }`)
         .then((data) => setArtistDetails(data[0]))
@@ -45,6 +45,7 @@ export default function ArtistDetails() {
                     <div key={index}>
                         <Link key={artistAlbum.slug.current} to={'/releases/' + artistAlbum.slug.current}>{artistAlbum.albumTitle}</Link>
                         <h6>{artistAlbum.releaseDate}</h6>
+                        <img src={artistAlbum.albumImage.asset.url} alt="" />
                     </div>
                 )
             })}
