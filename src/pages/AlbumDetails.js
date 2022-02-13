@@ -25,7 +25,7 @@ export default function AlbumDetails() {
 
   console.log(albumDetails);
 
-  if(!albumDetails) return <div>Loading...</div>
+  if(!albumDetails) return <h1 className='page-container'>Loading...</h1>
 
   return <div className='page-container'>
     <h1>{albumDetails.albumTitle}</h1>
