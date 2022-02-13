@@ -32,6 +32,9 @@ nav .nav-links-container .nav-link {
   color: white;
   margin-left: 45px;
 }
+nav .nav-links-container .nav-link:hover {
+  border-bottom: 1px solid white;
+}
 
 @media (max-width: 810px) {
   .nav-mobile-toggle {
@@ -79,14 +82,6 @@ nav .nav-links-container .nav-link {
     margin: 20px 30px 20px 45px;
   }
 }
-#hero-img {
-  width: 100%;
-  height: 660px;
-  padding-top: 100px;
-  background: url("../img/orange-house.png") no-repeat 25% 50%;
-  background-size: cover;
-}
-
 .artists-grid {
   display: flex;
   flex-wrap: wrap;
@@ -193,6 +188,41 @@ nav .nav-links-container .nav-link {
     padding: 15px 0;
   }
 }
+.album-details-grid {
+  display: flex;
+}
+.album-details-grid .album-details-image-wrapper, .album-details-grid .album-details-info {
+  padding: 10px;
+}
+.album-details-grid .album-details-image-wrapper {
+  width: 50%;
+}
+.album-details-grid .album-details-image-wrapper .album-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.album-details-grid .album-details-info {
+  width: 50%;
+}
+.album-details-grid .album-details-info a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.album-details-grid .album-details-info a:hover {
+  border-bottom: 1px solid white;
+}
+.album-details-grid .album-details-info .album-details-album-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.album-details-grid .album-details-info h4 {
+  padding-top: 10px;
+}
+
 :root {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -223,6 +253,10 @@ h1 {
 p {
   font-size: 16px;
   line-height: 24px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

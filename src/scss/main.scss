@@ -2,6 +2,7 @@
 @use '_hero';
 @use '_artists';
 @use '_artist-details';
+@use '_album-details';
 
 // Core Styles
 :root {
@@ -34,6 +35,10 @@ h1 {
 p {
     font-size: 16px;
     line-height: 24px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
