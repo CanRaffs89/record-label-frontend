@@ -21,7 +21,7 @@ export default function Navbar() {
                 </Link>
                 <div className={menu ? "nav-links-container active" : "nav-links-container"} id="nav-mobile">
                     <Link className="nav-link" to="/artists" onClick={showMenu}>ARTISTS</Link>
-                    <Link className="nav-link" to="/albums" onClick={showMenu}>RELEASES</Link>
+                    <Link className="nav-link" to="/releases" onClick={showMenu}>RELEASES</Link>
                     <Link className="nav-link" to="/contact" onClick={showMenu}>CONTACT</Link>
                 </div>
             </nav>

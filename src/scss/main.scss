@@ -1,8 +1,8 @@
-@use '_navbar';
-@use '_hero';
-@use '_artists';
-@use '_artist-details';
-@use '_album-details';
+@use 'navbar';
+@use 'hero';
+@use 'grid-layout';
+@use 'artist-details';
+@use 'album-details';
 
 // Core Styles
 :root {

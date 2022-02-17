@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Artists from './pages/Artists';
+import Releases from './pages/Releases';
 import ArtistDetails from './pages/ArtistDetails';
 import AlbumDetails from './pages/AlbumDetails';
 import Navbar from './components/Navbar';
@@ -17,8 +18,9 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/artists" element={<Artists />}/>
-        <Route exact path="/artists/:slug" element={<ArtistDetails/>}/>
-        <Route exact path="/releases/:slug" element={<AlbumDetails/>}/>
+        <Route exact path="/releases" element={<Releases />}/>
+        <Route exact path="/artists/:slug" element={<ArtistDetails />}/>
+        <Route exact path="/releases/:slug" element={<AlbumDetails />}/>
       </Routes>
       <div className="container">
         <Footer />

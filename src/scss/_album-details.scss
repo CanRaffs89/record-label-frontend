@@ -40,3 +40,13 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .album-details-grid {
+        flex-direction: column;
+
+        .album-details-image-wrapper, .album-details-info {
+            width: 100%;
+        }
+    }
+}

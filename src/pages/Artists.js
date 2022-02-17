@@ -22,14 +22,14 @@ export default function Artists() {
     },[]);
     
     return <div className='page-container'>
-        <div className="artists-grid">
+        <div className="items-grid">
             {artistData && artistData.map((artist, index) => {
                 return (
-                    <Link className='artist-card' key={artist.slug.current} to={'/artists/' + artist.slug.current}>
-                        <div className="artist-image-wrapper" key={index}>
-                            <img className='artist-image' src={artist.profileImage.asset.url} alt="" />
+                    <Link className='item-card' key={artist.slug.current} to={'/artists/' + artist.slug.current}>
+                        <div className="item-image-wrapper" key={index}>
+                            <img className='item-image' src={artist.profileImage.asset.url} alt="" />
                         </div>
-                        <h1 className='artist-name'>{artist.name}</h1>
+                        <h1 className='item-name'>{artist.name}</h1>
                     </Link>
                 )
             })}

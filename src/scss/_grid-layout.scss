@@ -1,22 +1,22 @@
-.artists-grid {
+.items-grid {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
 
-    .artist-card {
+    .item-card {
         width: 25%;
         padding: 10px 5px;
 
-        .artist-name {
+        .item-name {
             font-size: 28px;
             color: white;
             border-bottom: 1px solid #fff;
         }
 
-        .artist-image-wrapper {
+        .item-image-wrapper {
             width: 100%;
 
-            .artist-image {
+            .item-image {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
@@ -26,24 +26,24 @@
 }
 
 @media (max-width: 1200px) {
-    .artists-grid {
-        .artist-card {
+    .items-grid {
+        .item-card {
             width: 33%;
         }
     }
 }
 
 @media (max-width: 810px) {
-    .artists-grid {
-        .artist-card {
+    .items-grid {
+        .item-card {
             width: 50%;
         }
     }
 }
 
 @media (max-width: 600px) {
-    .artists-grid {
-        .artist-card {
+    .items-grid {
+        .item-card {
             width: 100%;
         }
     }
