@@ -11,7 +11,7 @@
     --dark-grey: #262626;
     --mid-grey: #4b4b4b;
     --light-grey: #6d6d6d;
-    --orange: #e3623c;
+    --orange: #f3663c;
 }
 
 * {
@@ -42,20 +42,21 @@ a {
 }
 
 .container {
-    margin: 0 120px;
+    padding: 0 120px;
 }
 
 .page-container {
-    padding: 100px 120px;
+    padding: 0 120px;
 }
 
 @media (max-width: 810px) {
     .container {
         margin: 0 30px;
+        padding: 0;
     }
 
     .page-container {
-        padding: 90px 30px;
+        padding: 0 10px;
     }
 
     h1 {

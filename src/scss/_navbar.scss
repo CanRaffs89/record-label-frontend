@@ -8,11 +8,11 @@
 }
 
 nav {
-    height: 50px;
-    margin-top: 20px;
+    height: 90px;
+    width: 100%;
     display: flex;
     align-items: center;
-    position: absolute;
+    background-color: var(--dark-grey);
 
     .nav-logo {
         height: 50px;
@@ -26,6 +26,7 @@ nav {
 
     .nav-links-container {
         transition: 340ms;
+
         .nav-link {
             font-size: 13px;
             letter-spacing: 3px;
@@ -35,7 +36,7 @@ nav {
         }
 
         .nav-link:hover {
-            border-bottom: 1px solid white;
+            color: var(--orange);
         }
     }
 }
@@ -45,7 +46,7 @@ nav {
         z-index: 2;
         display: initial;
         position: absolute;
-        top: 35px;
+        top: 25px;
         right: 30px;
         cursor: pointer;
 
@@ -67,8 +68,17 @@ nav {
     }
     
     nav {
+        height: 70px;
+
         .nav-logo {
             z-index: 2;
+            height: 40px;
+            width: 40px;
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
         }
 
         .nav-links-container.active {

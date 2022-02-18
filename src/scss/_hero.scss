@@ -1,7 +1,55 @@
-// #hero-img {
-//     width: 100%;
-//     height: 660px;
-//     padding-top: 100px;
-//     background: url('../img/orange-house.png') no-repeat 25% 50%;
-//     background-size: cover;
-// }
+.home-page-header {
+    border-bottom: 1px solid #fff;
+    padding: 0 5px 10px 5px;
+}
+
+.home-page-grid {
+    display: flex;
+
+    .single-album-section, .multiple-albums-section {
+        width: 50%;
+        padding: 0 10px;
+    }
+
+    .single-album-section {
+        .featured-album-wrapper {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }   
+
+    .multiple-albums-section {
+        .featured-albums-grid {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+
+            .featured-albums-card {
+                width: 50%;
+                padding: 0 5px;
+                text-decoration: none;
+
+                .featured-albums-cover-wrapper {
+                    width: 100%;
+
+                    .featured-albums-cover {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .featured-albums-title {
+                    font-size: 28px;
+                    color: white;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+}

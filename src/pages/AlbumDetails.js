@@ -24,8 +24,6 @@ export default function AlbumDetails() {
     .catch(console.error)
   }, [slug]);
 
-  console.log(albumDetails);
-
   if(!albumDetails) return <h1 className='page-container'>Loading...</h1>
 
   return <div className='page-container'>

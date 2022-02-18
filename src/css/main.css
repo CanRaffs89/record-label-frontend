@@ -8,11 +8,11 @@
 }
 
 nav {
-  height: 50px;
-  margin-top: 20px;
+  height: 90px;
+  width: 100%;
   display: flex;
   align-items: center;
-  position: absolute;
+  background-color: var(--dark-grey);
 }
 nav .nav-logo {
   height: 50px;
@@ -33,7 +33,7 @@ nav .nav-links-container .nav-link {
   margin-left: 45px;
 }
 nav .nav-links-container .nav-link:hover {
-  border-bottom: 1px solid white;
+  color: var(--orange);
 }
 
 @media (max-width: 810px) {
@@ -41,7 +41,7 @@ nav .nav-links-container .nav-link:hover {
     z-index: 2;
     display: initial;
     position: absolute;
-    top: 35px;
+    top: 25px;
     right: 30px;
     cursor: pointer;
   }
@@ -59,8 +59,17 @@ nav .nav-links-container .nav-link:hover {
     margin-top: 4px;
   }
 
+  nav {
+    height: 70px;
+  }
   nav .nav-logo {
     z-index: 2;
+    height: 40px;
+    width: 40px;
+  }
+  nav .nav-logo img {
+    height: 40px;
+    width: 40px;
   }
   nav .nav-links-container.active {
     right: 0;
@@ -82,6 +91,50 @@ nav .nav-links-container .nav-link:hover {
     margin: 20px 30px 20px 45px;
   }
 }
+.home-page-header {
+  border-bottom: 1px solid #fff;
+  padding: 0 5px 10px 5px;
+}
+
+.home-page-grid {
+  display: flex;
+}
+.home-page-grid .single-album-section, .home-page-grid .multiple-albums-section {
+  width: 50%;
+  padding: 0 10px;
+}
+.home-page-grid .single-album-section .featured-album-wrapper {
+  width: 100%;
+}
+.home-page-grid .single-album-section .featured-album-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-page-grid .multiple-albums-section .featured-albums-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.home-page-grid .multiple-albums-section .featured-albums-grid .featured-albums-card {
+  width: 50%;
+  padding: 0 5px;
+  text-decoration: none;
+}
+.home-page-grid .multiple-albums-section .featured-albums-grid .featured-albums-card .featured-albums-cover-wrapper {
+  width: 100%;
+}
+.home-page-grid .multiple-albums-section .featured-albums-grid .featured-albums-card .featured-albums-cover-wrapper .featured-albums-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.home-page-grid .multiple-albums-section .featured-albums-grid .featured-albums-card .featured-albums-title {
+  font-size: 28px;
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+
 .items-grid {
   display: flex;
   flex-wrap: wrap;
@@ -213,7 +266,7 @@ nav .nav-links-container .nav-link:hover {
   text-decoration: none;
 }
 .album-details-grid .album-details-info a:hover {
-  border-bottom: 1px solid white;
+  color: var(--orange);
 }
 .album-details-grid .album-details-info .album-details-album-title {
   padding-bottom: 10px;
@@ -237,7 +290,7 @@ nav .nav-links-container .nav-link:hover {
   --dark-grey: #262626;
   --mid-grey: #4b4b4b;
   --light-grey: #6d6d6d;
-  --orange: #e3623c;
+  --orange: #f3663c;
 }
 
 * {
@@ -268,20 +321,21 @@ a {
 }
 
 .container {
-  margin: 0 120px;
+  padding: 0 120px;
 }
 
 .page-container {
-  padding: 100px 120px;
+  padding: 0 120px;
 }
 
 @media (max-width: 810px) {
   .container {
     margin: 0 30px;
+    padding: 0;
   }
 
   .page-container {
-    padding: 90px 30px;
+    padding: 0 10px;
   }
 
   h1 {

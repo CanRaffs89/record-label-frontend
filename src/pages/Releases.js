@@ -7,7 +7,7 @@ export default function Releases() {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == 'album'] | order(albumTitle){
+            .fetch(`*[_type == 'album'] | order(releaseDate desc){
                 albumTitle,
                 slug,
                 albumImage{
