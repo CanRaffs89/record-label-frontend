@@ -21,7 +21,6 @@ export default function FeaturedAlbums() {
             .then((data) => setFeaturedAlbums(data))
             .catch(console.error)
     },[]);
-    console.log(featuredAlbums)
 
     return (
         <div className="featured-albums-grid">

@@ -3,6 +3,7 @@
 @use 'grid-layout';
 @use 'artist-details';
 @use 'album-details';
+@use 'news';
 
 // Core Styles
 :root {
@@ -51,7 +52,7 @@ a {
 
 @media (max-width: 810px) {
     .container {
-        margin: 0 30px;
+        margin: 0 10px;
         padding: 0;
     }
 

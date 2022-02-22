@@ -1,37 +1,46 @@
+.banner-image {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
 .home-page-header {
+    font-size: 28px;
     border-bottom: 1px solid #fff;
-    padding: 0 5px 10px 5px;
+    padding: 0 5px 0 5px;
 }
 
 .home-page-grid {
     display: flex;
+    padding: 20px 0;
 
-    .single-album-section, .multiple-albums-section {
+    .news-section, .featured-albums-section {
         width: 50%;
-        padding: 0 10px;
     }
 
-    .single-album-section {
-        .featured-album-wrapper {
-            width: 100%;
+    .news-section {
+        padding-right: 30px;
+    }
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }   
+    .featured-albums-section {
+        padding-left: 30px;
 
-    .multiple-albums-section {
         .featured-albums-grid {
             display: flex;
             flex-wrap: wrap;
             max-width: 100%;
 
+            a:nth-child(even) {
+                padding-left: 10px;
+            }
+
+            a:nth-child(odd) {
+                padding-right: 10px;
+            }
+
             .featured-albums-card {
                 width: 50%;
-                padding: 0 5px;
+                padding: 10px 0;
                 text-decoration: none;
 
                 .featured-albums-cover-wrapper {
@@ -45,11 +54,44 @@
                 }
 
                 .featured-albums-title {
-                    font-size: 28px;
+                    font-size: 18px;
                     color: white;
                     border-bottom: 1px solid #fff;
+                    padding-bottom: 5px;
+                    letter-spacing: 1px;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 810px) {
+    .banner-image {
+        height: 20vh;
+    }
+
+    .home-page-grid {
+        flex-direction: column;
+
+        .news-section, .featured-albums-section {
+            width: 100%;
+            padding: 0;
+        }
+
+        .news-section {
+            padding-bottom: 20px;
+        }
+
+        .featured-albums-section {
+            .featured-albums-grid {
+                a {
+                    padding: 20px 0 !important; 
+                }
+                
+                .featured-albums-card {
+                    width: 100%;
+                }
+            }
+        }    
     }
 }
