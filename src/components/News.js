@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
 import sanityClient from '../sanity.js';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +34,7 @@ export default function News() {
               <div key={index} className='news-article'>
                 <img className='banner-image' src={article.albumRef.albumImage.asset.url} alt="" />
                 <Link key={index} to={'/releases/' + article.albumRef.slug.current}><h2>{article.title}</h2></Link>
-                <h4>{article.publishDate}</h4>
+                <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
                 <p>{article.text}</p>
               </div>
             )
