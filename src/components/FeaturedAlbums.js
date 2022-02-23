@@ -7,7 +7,7 @@ export default function FeaturedAlbums() {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == 'album'][0...4] | order(releaseDate desc){
+            .fetch(`*[_type == 'album'] | order(releaseDate desc)[0..3]{
                 albumTitle,
                 releaseDate,
                 slug,

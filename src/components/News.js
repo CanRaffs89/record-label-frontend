@@ -1,18 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import sanityClient from '../sanity.js';
+import { Link } from 'react-router-dom';
 
 export default function News() {
+  const [articles, setArticles] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(`*[_type == 'article'] | order(publishDate desc){
+        title,
+        publishDate,
+        text,
+        albumRef->{
+          albumTitle,
+          slug,
+          albumImage{
+            asset->{
+              _id,
+              url
+            }
+          }
+        }
+      }`)
+      .then((data) => setArticles(data))
+      .catch(console.error)
+  },[]);
+
   return (
     <>
-        <div className='news-article'>
-            <h2>Article Title</h2>
-            <h4>1 January 2022</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in enim voluptates porro rerum amet aperiam dolorum quis accusantium saepe, nostrum similique autem a veniam, mollitia iure fugit tempora beatae?</p>
-        </div>
-        <div className='news-article'>
-            <h2>Article Title</h2>
-            <h4>5 January 2022</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste in enim voluptates porro rerum amet aperiam dolorum quis accusantium saepe, nostrum similique autem a veniam, mollitia iure fugit tempora beatae?</p>
-        </div>
+        {articles && articles.map((article, index) => {
+            return (
+              <div key={index} className='news-article'>
+                <img className='banner-image' src={article.albumRef.albumImage.asset.url} alt="" />
+                <Link key={index} to={'/releases/' + article.albumRef.slug.current}><h2>{article.title}</h2></Link>
+                <h4>{article.publishDate}</h4>
+                <p>{article.text}</p>
+              </div>
+            )
+        })}
     </>
   )
 }
