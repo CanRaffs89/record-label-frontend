@@ -27,7 +27,7 @@ export default function Releases() {
               return (
                   <Link className='item-card' key={album.slug.current} to={'/releases/' + album.slug.current}>
                       <div className="item-image-wrapper" key={index}>
-                          <img className='item-image' src={album.albumImage.asset.url} alt="" />
+                          <img loading='lazy' className='item-image' src={album.albumImage.asset.url} alt="" />
                       </div>
                       <h1 className="item-name">{album.albumTitle}</h1>
                   </Link>

@@ -27,7 +27,7 @@ export default function Artists() {
                 return (
                     <Link className='item-card' key={artist.slug.current} to={'/artists/' + artist.slug.current}>
                         <div className="item-image-wrapper" key={index}>
-                            <img className='item-image' src={artist.profileImage.asset.url} alt="" />
+                            <img loading='lazy' className='item-image' src={artist.profileImage.asset.url} alt="" />
                         </div>
                         <h1 className='item-name'>{artist.name}</h1>
                     </Link>
