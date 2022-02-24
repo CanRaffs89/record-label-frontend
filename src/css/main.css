@@ -341,6 +341,11 @@ nav .nav-links-container .nav-link:hover {
   padding: 5px 0;
 }
 
+footer {
+  height: 90px;
+  width: 100%;
+}
+
 :root {
   font-size: 16px;
   scroll-behavior: smooth;
