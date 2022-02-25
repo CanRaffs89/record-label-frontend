@@ -15,17 +15,12 @@ nav {
     background-color: var(--dark-grey);
 
     .nav-logo {
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: auto;
 
         #nav-logo-text {
             height: 70px;
             width: auto;
-        }
-
-        img {
-            height: 50px;
-            width: 50px;
         }
     }
 
@@ -77,12 +72,10 @@ nav {
 
         .nav-logo {
             z-index: 2;
-            height: 40px;
-            width: 40px;
+            height: 50px;
 
-            img {
-                height: 40px;
-                width: 40px;
+            #nav-logo-text {
+                height: 50px;
             }
         }
 

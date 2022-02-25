@@ -7,7 +7,7 @@ export default function FeaturedAlbums() {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type == 'album'] | order(releaseDate desc)[0..3]{
+            .fetch(`*[_type == 'album'] | order(releaseDate desc)[0..5]{
                 albumTitle,
                 releaseDate,
                 slug,
@@ -30,7 +30,7 @@ export default function FeaturedAlbums() {
                         <div className="featured-albums-cover-wrapper">
                             <img className='featured-albums-cover' src={album.albumImage.asset.url} alt="" />
                         </div>
-                        <h1 className='featured-albums-title'>{album.albumTitle}</h1>
+                        <h2 className='featured-albums-title'>{album.albumTitle}</h2>
                     </Link>
                 )
             })}

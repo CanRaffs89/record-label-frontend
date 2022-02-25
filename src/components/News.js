@@ -12,28 +12,28 @@ export default function News() {
         title,
         publishDate,
         text,
-        albumRef->{
-          albumTitle,
-          slug,
-          albumImage{
-            asset->{
-              _id,
-              url
-            }
+        category,
+        articleImage{
+          asset->{
+            _id,
+            url
           }
-        }
+        },
+        articleRef->{slug}
       }`)
       .then((data) => setArticles(data))
       .catch(console.error)
   },[]);
+
+  console.log(articles)
 
   return (
     <>
         {articles && articles.map((article, index) => {
             return (
               <div key={index} className='news-article'>
-                <img className='banner-image' src={article.albumRef.albumImage.asset.url} alt="" />
-                <Link key={index} to={'/releases/' + article.albumRef.slug.current}><h2>{article.title}</h2></Link>
+                <img className='banner-image' src={article.articleImage.asset.url} alt="" />
+                <Link key={index} to={'/' + article.category + '/' + article.articleRef.slug.current}><h2>{article.title}</h2></Link>
                 <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
                 <p>{article.text}</p>
               </div>
