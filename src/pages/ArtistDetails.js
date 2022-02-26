@@ -33,7 +33,7 @@ export default function ArtistDetails() {
         .catch(console.error)
     }, [slug]);
 
-    if(!artistDetails) return <h1 className='page-container'>Loading...</h1>;
+    if(!artistDetails) return <></>;
 
     return <div className="page-container">
                 <div className="artist-details-grid">

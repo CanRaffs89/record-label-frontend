@@ -25,7 +25,7 @@ export default function AlbumDetails() {
     .catch(console.error)
   }, [slug]);
 
-  if(!albumDetails) return <h1 className='page-container'>Loading...</h1>
+  if(!albumDetails) return <></>;
 
   return <div className='page-container'>
             <div className="album-details-grid">

@@ -32,7 +32,7 @@ export default function News() {
         {articles && articles.map((article, index) => {
             return (
               <div key={index} className='news-article'>
-                <img className='banner-image' src={article.articleImage.asset.url} alt="" />
+                <img className='news-banner-image' src={article.articleImage.asset.url} alt="" />
                 <Link key={index} to={'/' + article.category + '/' + article.articleRef.slug.current}><h2>{article.title}</h2></Link>
                 <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
                 <p>{article.text}</p>
