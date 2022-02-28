@@ -35,7 +35,7 @@ export default function AlbumDetails() {
               <div className="album-details-info">
                 <Link to={'/artists'}>ARTISTS</Link> / <Link key={albumDetails.albumArtist.slug.current} to={'/artists/' + albumDetails.albumArtist.slug.current}>{albumDetails.albumArtist.name}</Link>
                 <h1 className='album-details-album-title'>{albumDetails.albumTitle}</h1>
-                <h4>Released on {dayjs(albumDetails.releaseDate).format('D MMMM YYYY')}</h4>
+                <h4 className='album-details-album-date'>Released on {dayjs(albumDetails.releaseDate).format('D MMMM YYYY')}</h4>
               </div>
             </div>
           </div>;

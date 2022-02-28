@@ -3,12 +3,12 @@ import dayjs from 'dayjs';
 import sanityClient from '../sanity.js';
 import { Link } from 'react-router-dom';
 
-export default function News() {
+export default function NewsArticles({ itemWidth }) {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
     sanityClient
-      .fetch(`*[_type == 'article'] | order(publishDate desc){
+      .fetch(`*[_type == 'article'] | order(publishDate desc)[0..3]{
         title,
         publishDate,
         text,
@@ -25,16 +25,14 @@ export default function News() {
       .catch(console.error)
   },[]);
 
-  console.log(articles)
-
   return (
     <>
         {articles && articles.map((article, index) => {
             return (
-              <div key={index} className='news-article'>
+              <div key={index} className='news-article' style={{ width: itemWidth }}>
                 <img className='news-banner-image' src={article.articleImage.asset.url} alt="" />
                 <Link key={index} to={'/' + article.category + '/' + article.articleRef.slug.current}><h2>{article.title}</h2></Link>
-                <h4>{dayjs(article.publishDate).format('D MMMM YYYY')} in <Link id='news-category-link' key={index} to={'/'}>{article.category}</Link></h4>
+                <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
                 <p>{article.text}</p>
               </div>
             )

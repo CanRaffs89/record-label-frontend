@@ -20,6 +20,7 @@ export default function Navbar() {
                     <img id="nav-logo-text" src={logoText} alt="" />
                 </Link>
                 <div className={menu ? "nav-links-container active" : "nav-links-container"} id="nav-mobile">
+                    <Link className="nav-link" to="/news" onClick={showMenu}>NEWS</Link>
                     <Link className="nav-link" to="/artists" onClick={showMenu}>ARTISTS</Link>
                     <Link className="nav-link" to="/releases" onClick={showMenu}>RELEASES</Link>
                     <Link className="nav-link" to="/contact" onClick={showMenu}>CONTACT</Link>

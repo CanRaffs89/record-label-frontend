@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import News from './pages/News';
 import Artists from './pages/Artists';
 import Releases from './pages/Releases';
 import ArtistDetails from './pages/ArtistDetails';
@@ -17,6 +18,7 @@ export default function App() {
       </div>
       <Routes>
         <Route exact path="/" element={<Home />}/>
+        <Route exact path="/news" element={<News />}/>
         <Route exact path="/artists" element={<Artists />}/>
         <Route exact path="/releases" element={<Releases />}/>
         <Route exact path="/artists/:slug" element={<ArtistDetails />}/>
