@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FeaturedAlbums from '../components/FeaturedAlbums.js';
 import News from '../components/News.js';
 import banner from '../img/esther-jiao-ADv0GiMBlmI-unsplash.jpg';
@@ -8,11 +9,11 @@ export default function Home() {
         <img className='banner-image' src={banner} alt="" />
         <div className="home-page-grid">
             <div className="news-section">
-                <h1 className='home-page-header'>News</h1>
+                <Link to='/' className='home-page-header'>News</Link>
                 <News/>
             </div>
             <div className="featured-albums-section">
-                <h1 className="home-page-header">Latest Releases</h1>
+                <Link to='/releases' className="home-page-header">Latest Releases</Link>
                 <FeaturedAlbums/>
             </div>
         </div>

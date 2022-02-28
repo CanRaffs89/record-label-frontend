@@ -34,7 +34,7 @@ export default function News() {
               <div key={index} className='news-article'>
                 <img className='news-banner-image' src={article.articleImage.asset.url} alt="" />
                 <Link key={index} to={'/' + article.category + '/' + article.articleRef.slug.current}><h2>{article.title}</h2></Link>
-                <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
+                <h4>{dayjs(article.publishDate).format('D MMMM YYYY')} in <Link id='news-category-link' key={index} to={'/'}>{article.category}</Link></h4>
                 <p>{article.text}</p>
               </div>
             )

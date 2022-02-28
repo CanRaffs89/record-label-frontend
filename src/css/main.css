@@ -99,6 +99,9 @@ nav .nav-links-container .nav-link:hover {
   font-size: 28px;
   border-bottom: 1px solid #fff;
   padding: 0 5px 0 5px;
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .home-page-grid {
@@ -304,6 +307,9 @@ nav .nav-links-container .nav-link:hover {
   letter-spacing: 3px;
   text-decoration: none;
 }
+.album-details-grid .album-details-info a:hover {
+  color: var(--orange);
+}
 .album-details-grid .album-details-info .album-details-album-title {
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
@@ -336,6 +342,10 @@ nav .nav-links-container .nav-link:hover {
   font-weight: 300;
   letter-spacing: 1px;
   padding: 5px 0;
+}
+.news-article #news-category-link {
+  text-transform: capitalize;
+  text-decoration: underline;
 }
 
 footer {
