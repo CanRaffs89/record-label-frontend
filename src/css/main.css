@@ -114,6 +114,12 @@ nav .nav-links-container .nav-link:hover {
 .home-page-grid .news-section {
   padding-right: 30px;
 }
+.home-page-grid .news-section #news-link {
+  border-bottom: none;
+  width: auto;
+  font-size: 24px;
+  padding-top: 10px;
+}
 .home-page-grid .featured-albums-section {
   padding-left: 30px;
 }

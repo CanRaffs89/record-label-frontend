@@ -23,6 +23,13 @@
 
     .news-section {
         padding-right: 30px;
+
+        #news-link {
+            border-bottom: none;
+            width: auto;
+            font-size: 24px;
+            padding-top: 10px;
+        }
     }
 
     .featured-albums-section {

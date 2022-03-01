@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import sanityClient from '../sanity.js';
 import { Link } from 'react-router-dom';
 
-export default function NewsArticles({ itemWidth }) {
+export default function NewsArticles() {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function NewsArticles({ itemWidth }) {
     <>
         {articles && articles.map((article, index) => {
             return (
-              <div key={index} className='news-article' style={{ width: itemWidth }}>
+              <div key={index} className='news-article'>
                 <img className='news-banner-image' src={article.articleImage.asset.url} alt="" />
                 <Link key={index} to={'/' + article.category + '/' + article.articleRef.slug.current}><h2>{article.title}</h2></Link>
                 <h4>{dayjs(article.publishDate).format('D MMMM YYYY')}</h4>
