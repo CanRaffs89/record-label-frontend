@@ -1,3 +1,12 @@
+.artist-details-name-mobile {
+    display: none;
+    font-size: 28px;
+}
+
+.artist-details-name-desktop {
+    display: inline-block;
+}
+
 .artist-details-grid {
     display: flex;
 
@@ -61,11 +70,28 @@
 }
 
 @media (max-width: 1000px) {
+    .artist-details-name-desktop {
+        display: none;
+    }
+
+    .artist-details-name-mobile {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+    }
+
     .artist-details-grid {
         flex-direction: column;
 
         .artist-details-info, .artist-details-albums {
             width: 100%;
+        }
+
+        .artist-details-info {
+            p {
+                padding-top: 10px;
+            }
         }
 
         .artist-details-albums {

@@ -41,10 +41,11 @@ export default function ArtistDetails() {
                         <div className="artist-details-image-wrapper">
                             <img className='artist-details-image' src={artistDetails.profileImage.asset.url} alt="" />
                         </div>
+                        <h1 className='artist-details-name-mobile'>{artistDetails.name}</h1>
                         <p>{artistDetails.bio}</p>
                     </div>
                     <div className="artist-details-albums">
-                        <h1>{artistDetails.name}</h1>
+                        <h1 className='artist-details-name-desktop'>{artistDetails.name}</h1>
                         <div className="artist-details-albums-grid">
                             {artistDetails.albums && artistDetails.albums.map((artistAlbum, index) => {
                                 return (

@@ -79,6 +79,10 @@ a:hover {
     .page-container {
         padding: 0 10px;
     }
+
+    .flex-page-container {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 810px) {
