@@ -95,15 +95,6 @@ nav .nav-links-container .nav-link:hover {
   object-fit: cover;
 }
 
-.home-page-header {
-  font-size: 28px;
-  border-bottom: 1px solid #fff;
-  padding: 0 5px 0 5px;
-  width: 100%;
-  display: inline-block;
-  font-weight: bold;
-}
-
 .home-page-grid {
   display: flex;
   padding: 20px 0;
@@ -338,6 +329,8 @@ nav .nav-links-container .nav-link:hover {
 .news-container {
   display: flex;
   flex-wrap: wrap;
+  width: 60%;
+  padding-right: 30px;
 }
 
 .news-article {
@@ -358,6 +351,11 @@ nav .nav-links-container .nav-link:hover {
   letter-spacing: 1px;
   padding: 5px 0;
   color: var(--light-grey);
+}
+
+.events-container {
+  width: 40%;
+  padding: 20px 5px 20px 30px;
 }
 
 footer {
@@ -412,6 +410,19 @@ a:hover {
 
 .page-container {
   padding: 0 120px;
+}
+
+.flex-page-container {
+  display: flex;
+}
+
+.h1-page-header {
+  font-size: 28px;
+  border-bottom: 1px solid #fff;
+  padding: 0 5px 0 5px;
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
 }
 
 @media (max-width: 1100px) {

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import sanityClient from '../sanity.js';
-import { Link } from 'react-router-dom';
+import Events from '../components/Events.js';
 
 export default function News() {
   const [newsItems, setNewsItems] = useState(null);
@@ -26,7 +27,7 @@ export default function News() {
   },[]);
 
   return (
-    <div className='page-container'>
+    <div className='flex-page-container page-container'>
         <div className="news-container">
             {newsItems && newsItems.map((item, index) => {
               return (
@@ -38,6 +39,10 @@ export default function News() {
                 </div>
               )
             })}
+        </div>
+        <div className="events-container">
+          <h1 className='h1-page-header'>Events</h1>
+          <Events />
         </div>
     </div>
   )

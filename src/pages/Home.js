@@ -9,12 +9,12 @@ export default function Home() {
         <img className='banner-image' src={banner} alt="" />
         <div className="home-page-grid">
             <div className="news-section">
-                <Link to='/news' className='home-page-header'>News</Link>
+                <Link to='/news' className='h1-page-header'>News</Link>
                 <NewsArticles/>
-                <Link to='/news' id='news-link' className='home-page-header' >Load More News</Link>
+                <Link to='/news' id='news-link' className='h1-page-header' >Load More News</Link>
             </div>
             <div className="featured-albums-section">
-                <Link to='/releases' className="home-page-header">Latest Releases</Link>
+                <Link to='/releases' className="h1-page-header">Latest Releases</Link>
                 <FeaturedAlbums/>
             </div>
         </div>
