@@ -41,11 +41,17 @@ export default function AlbumDetails() {
                 <Link to={'/artists'}>ARTISTS</Link> / <Link key={albumDetails.albumArtist.slug.current} to={'/artists/' + albumDetails.albumArtist.slug.current}>{albumDetails.albumArtist.name}</Link>
                 <h1 className='album-details-album-title'>{albumDetails.albumTitle}</h1>
                 <h4 className='album-details-album-date'>Released on {dayjs(albumDetails.releaseDate).format('D MMMM YYYY')}</h4>
-                <img className='album-details-icon' src={amazonIcon} alt="" />
-                <img className='album-details-icon' src={appleIcon} alt="" />
-                <img className='album-details-icon' src={bandcampIcon} alt="" />
-                <img className='album-details-icon' src={itunesIcon} alt="" />
-                <img className='album-details-icon' src={spotifyIcon} alt="" />
+                <div className="icon-container">
+                  <div className="icons-stream">
+                    <Link to="/"><img className='album-details-icon' src={spotifyIcon} alt="" /></Link>
+                    <Link to="/"><img className='album-details-icon' src={appleIcon} alt="" /></Link>
+                  </div>
+                  <div className="icons-buy">
+                    <Link to="/"><img className='album-details-icon' src={amazonIcon} alt="" /></Link>
+                    <Link to="/"><img className='album-details-icon' src={bandcampIcon} alt="" /></Link>
+                    <Link to="/"><img className='album-details-icon' src={itunesIcon} alt="" /></Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>;

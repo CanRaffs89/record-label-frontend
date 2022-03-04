@@ -109,7 +109,7 @@ nav .nav-links-container .nav-link:hover {
   border-bottom: none;
   width: auto;
   font-size: 24px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .home-page-grid .featured-albums-section {
   padding-left: 30px;
@@ -342,9 +342,13 @@ nav .nav-links-container .nav-link:hover {
 .album-details-grid .album-details-info h4 {
   padding-top: 10px;
 }
+.album-details-grid .album-details-info .icon-container .icons-stream, .album-details-grid .album-details-info .icon-container .icons-buy {
+  margin: 10px auto;
+}
 .album-details-grid .album-details-info .album-details-icon {
   height: 50px;
   width: auto;
+  margin: 0 5px;
 }
 
 @media (max-width: 1000px) {
@@ -412,6 +416,11 @@ nav .nav-links-container .nav-link:hover {
 footer {
   height: 90px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #fff;
+  margin-top: 10px;
 }
 
 :root {

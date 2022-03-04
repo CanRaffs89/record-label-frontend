@@ -1,4 +1,9 @@
 footer {
     height: 90px;
     width: 100%;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+  }

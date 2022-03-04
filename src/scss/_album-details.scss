@@ -45,9 +45,16 @@
             padding-top: 10px;
         }
 
+        .icon-container {
+            .icons-stream, .icons-buy {
+                margin: 10px auto;
+            }
+        }
+
         .album-details-icon {
             height: 50px;
             width: auto;
+            margin: 0 5px;
         }
     }
 }
