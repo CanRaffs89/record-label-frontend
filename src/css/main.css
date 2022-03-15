@@ -345,10 +345,18 @@ nav .nav-links-container .nav-link:hover {
 .album-details-grid .album-details-info .icon-container .icons-stream, .album-details-grid .album-details-info .icon-container .icons-buy {
   margin: 10px auto;
 }
+.album-details-grid .album-details-info .icon-header {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  padding: 20px 0 10px 0;
+}
 .album-details-grid .album-details-info .album-details-icon {
   height: 50px;
   width: auto;
-  margin: 0 5px;
+  margin-right: 15px;
 }
 
 @media (max-width: 1000px) {

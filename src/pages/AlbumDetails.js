@@ -43,10 +43,12 @@ export default function AlbumDetails() {
                 <h4 className='album-details-album-date'>Released on {dayjs(albumDetails.releaseDate).format('D MMMM YYYY')}</h4>
                 <div className="icon-container">
                   <div className="icons-stream">
+                    <h4 className='icon-header'>Stream</h4>
                     <Link to="/"><img className='album-details-icon' src={spotifyIcon} alt="" /></Link>
                     <Link to="/"><img className='album-details-icon' src={appleIcon} alt="" /></Link>
                   </div>
                   <div className="icons-buy">
+                    <h4 className="icon-header">Buy</h4>
                     <Link to="/"><img className='album-details-icon' src={amazonIcon} alt="" /></Link>
                     <Link to="/"><img className='album-details-icon' src={bandcampIcon} alt="" /></Link>
                     <Link to="/"><img className='album-details-icon' src={itunesIcon} alt="" /></Link>
