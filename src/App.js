@@ -6,6 +6,7 @@ import Artists from './pages/Artists';
 import Releases from './pages/Releases';
 import ArtistDetails from './pages/ArtistDetails';
 import AlbumDetails from './pages/AlbumDetails';
+import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route exact path="/releases" element={<Releases />}/>
         <Route exact path="/artists/:slug" element={<ArtistDetails />}/>
         <Route exact path="/releases/:slug" element={<AlbumDetails />}/>
+        <Route exact path="/contact" element={<Contact />}/>
       </Routes>
       <div className="container">
         <Footer />
