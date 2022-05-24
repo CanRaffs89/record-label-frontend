@@ -1,4 +1,4 @@
-.map-container {
+.contact-map-container {
     width: 40%;
     img {
         height: 100%;
@@ -7,8 +7,30 @@
     }
 }
 
-@media (max-width: 810px) {
-    .map-container {
+.contact-text-container {
+    width: 55%;
+    padding-left: 5%;
+
+    .contact-text-heading {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    .contact-text-time {
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: var(--light-grey);
+    }
+}
+
+@media (max-width: 1100px) {
+    .contact-map-container, .contact-text-container {
         width: 100%;
+    }
+
+    .contact-text-container {
+        padding: 10px 0;
     }
 }
